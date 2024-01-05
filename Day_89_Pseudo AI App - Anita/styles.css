@@ -53,13 +53,16 @@ body {
 }
 
 .creator {
-  width: 10rem;
+  width: 12rem;
   height: 10rem;
   display: block;
   border-radius: 50%;
   text-align: center;
   margin: 0 auto;
+  border: 2px solid var(--color-primary);
+
 }
+
 
 .anita {
   border: 2px solid var(--color-primary);
