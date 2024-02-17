@@ -13,7 +13,7 @@ const speechSynthesis = window.speechSynthesis;
 const recognition = new speechRecognition();
 
 if (speechRecognition && speechSynthesis ) {
-  console.log("Speech Recognition and Synthsis is Supported");
+  // console.log("Speech Recognition and Synthsis is Supported");
 
   micBtn.addEventListener("click", micBtnClicked);
   function micBtnClicked(e) {
@@ -30,7 +30,7 @@ if (speechRecognition && speechSynthesis ) {
       micBtn.classList.replace("fa-microphone", "fa-microphone-slash");
       instruction.textContent = "Recording... Press Ctrl + m to stop.";
       searchInput.focus();
-      console.log("Speech Recognition Started");
+      // console.log("Speech Recognition Started");
     });
 
       //   Stop Speech Recognition
@@ -38,7 +38,7 @@ if (speechRecognition && speechSynthesis ) {
     micBtn.classList.replace("fa-microphone-slash", "fa-microphone");
     instruction.textContent = "Press Ctrl + X or Click the Mic icon to start";
     searchInput.focus();
-    console.log("Speech Recognition Disabled");
+    // console.log("Speech Recognition Ended");
   });
   recognition.continuous = true;
   // Keyborad Shortcuts for mic
@@ -68,10 +68,21 @@ function speechRecognitionKeys() {
 
 function loadTranscript() {
   recognition.addEventListener("result", (e) => {
-    console.log(e);
+    // console.log(e);
     const current = e.resultIndex;
     const transcript = e.results[current][0].transcript;
-    console.log(transcript);
+    showTranscript();
+
+    // Loop Through the List Array
+    for (let i = 0; i < lists.length; i++) {
+      // console.log(lists[i].question);
+      let askQuestion = transcript.toLowerCase().trim();
+      if (askQuestion.includes(lists[i].question)) {
+        console.log("match");
+        console.log(lists[i].answer);
+        respond(lists[i].answer);
+      } 
+    }
   });
 }
 
@@ -79,7 +90,7 @@ function loadTranscript() {
 
 function respond(res) {
   let voices = window.speechSynthesis.getVoices();
-  console.log(voices);
+  // console.log(voices);
   const speech = new SpeechSynthesisUtterance();
   speech.lang = "en-GB";
   speech.text = res;
@@ -111,4 +122,10 @@ function respond(res) {
     }
   }
 
+}
+
+// Show transcript
+
+function showTranscript() {
+  
 }
