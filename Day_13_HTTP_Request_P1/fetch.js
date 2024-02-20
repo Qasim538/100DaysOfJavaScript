@@ -11,7 +11,7 @@ function getUsers(e) {
 
         })
         .then(function(data){
-            // console.log(data)
+            console.log(data)
             let output = "";
             data.forEach(function(user) {
 
