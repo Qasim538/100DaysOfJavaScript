@@ -14,6 +14,7 @@ function getQuotes(e) {
         const https = new XMLHttpRequest();
 
     https.open ("GET", "https://type.fit/api/quotes", true)
+
     https.onload = function() {
         if (this.status === 200) {
             // console.log(this.responseText)
