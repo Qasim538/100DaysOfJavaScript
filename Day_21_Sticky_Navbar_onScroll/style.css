@@ -62,10 +62,9 @@ nav {
 }
 
 header.sticky {
-  background-color: var(--grey);
+  background-color: orange;
   border-bottom: 1px solid #777;
   padding: 1rem 0;
-
 }
 
 .logo {
