@@ -4,7 +4,7 @@
 
         const response = await fetch(url)
         const data = await response.json()
-        console.log(await response.json());
+        // console.log(data);
         const time = data.datetime
 
         // const dateTimeObject = new Date(data.datetime);
