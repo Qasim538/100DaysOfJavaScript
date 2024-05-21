@@ -9,7 +9,7 @@ function getJoke() {
   fetch(url)
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Network response was not ok.');
+        throw new Error("Network response was not ok.");
       }
       return response.json();
     })
@@ -18,6 +18,6 @@ function getJoke() {
       joke.innerHTML = `${data.setup}<br>${data.punchline}`;
     })
     .catch((error) => {
-      console.error('Error fetching joke:', error);
+      console.error("Error fetching joke:", error);
     });
 }

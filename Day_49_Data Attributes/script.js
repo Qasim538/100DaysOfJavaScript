@@ -10,11 +10,14 @@ btns.forEach((btn) => {
         console.log(filter)
 
         if(filter == "home") {
-            text.textContent = "Home Page"
+            text.innerHTML = `<div>
+                <h1>This is Home Page</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, deleniti!</p>
+            </div>`
         } else if (filter == "about") {
             text.textContent = "About Page"
         } else {
-            text.textContent = "Contact Page"
+            text.textContent = "contact Page"
 
         }
     })
