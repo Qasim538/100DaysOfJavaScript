@@ -29,8 +29,11 @@ button[1].addEventListener("click", () => {
     }
   } else {
     if (currentFormItem > 3) {
+      if(confirm('You are about to submit the form. Do you want to continue?'))
       // Validate the form
       alert("Submitted")
+    } else {
+      alert('Submission cancelled')
     }
   }
 })
@@ -49,9 +52,11 @@ button[0].addEventListener("click", () => {
       button[0].style.display = "none"
     }
 
+
     if (currentFormItem < 3) {
       button[1].innerHTML = "Next"
     }
+
 
   }
 })
