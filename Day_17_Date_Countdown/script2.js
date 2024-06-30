@@ -1,4 +1,4 @@
-const countTo = "1 Jan 2025";
+const countTo = "7 June 2024";
 
 const c = setInterval(() => {
     const endDate = new Date(countTo)

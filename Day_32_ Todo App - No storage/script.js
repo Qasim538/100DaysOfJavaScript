@@ -3,8 +3,10 @@ const input = document.querySelector("input"),
       todoList = document.querySelector(".todo-list"),
       clear = document.querySelector(".clear")
 
-      //ADD List Item
 
+  const task = localStorage.setItem('task')
+
+      //ADD List Item
       const addTask = () => {
         const newLi = document.createElement("li");
         const delBtn = document.createElement("button");
@@ -16,6 +18,7 @@ const input = document.querySelector("input"),
           newLi.appendChild(delBtn);
           todoList.appendChild(newLi);
           input.value = "";
+          input.focus()
         } else { 
           alert("Please add a task first")
 

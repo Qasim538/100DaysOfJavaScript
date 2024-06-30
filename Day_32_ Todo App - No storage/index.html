@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="https://kit.fontawesome.com/1935d064dd.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <section>
-      <div class="container">
-        <div class="add-item">
-          <form action="" onsubmit="return false">
-            <input type="text" placeholder="Add a Task" />
-            <button>Add</button>
-          </form>
-        </div>
-        <!-- Ordered List -->
-        <h2>List of Tasks To Do</h2>
-        <hr />
-        <ol class="todo-list">
-          <!-- <li>
-            Task 1
-            <button><i class="fas fa-trash-alt"></i></button>
-          </li> -->
-        </ol>
-        <hr />
-        <button class="clear">Clear Tasks</button>
-      </div>
-    </section>
-
-    <script src="script2.js"></script>
-    <!-- <script src="app.js"></script> -->
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/65ea224340.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>To-Do List</h1>
+    <div class="input-container">
+      <input class="input" type="text" placeholder="Add a new task"></input>
+      <button class="button">Add Task</button>
+    </div>
+    <ul class="todo-list"></ul>
+    <button class="clear">Clear All</button>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
