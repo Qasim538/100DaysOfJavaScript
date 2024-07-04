@@ -83,6 +83,7 @@ h1 {
   font-weight: 900;
   content: "\f068";
   color: var(--color-primary);
+  rotate: 180deg;
 }
 
 .desc {
@@ -91,4 +92,10 @@ h1 {
   max-height: 0;
   overflow: hidden;
   transition: all 0.2s ease;
+
+}  
+
+.desc p {
+  padding: 1rem 0;
+  font-size: 20px;
 }

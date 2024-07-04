@@ -9,6 +9,6 @@ acc[i].addEventListener("click", function() {
         desc.style.maxHeight = null
 
     } else {
-        desc.style.maxHeight = desc.scrollHeight + "88px"
+        desc.style.maxHeight = desc.scrollHeight + "100px"
     }
 })
